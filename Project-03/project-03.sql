@@ -78,7 +78,7 @@ FROM Customers AS c
 LEFT JOIN Orders AS o
     ON c.CustomerID = o.CustomerID
 WHERE o.OrderDate IS NULL
-GROUP BY c.ContactName;
+order BY c.ContactName;
 
 
 -- =========================================================
