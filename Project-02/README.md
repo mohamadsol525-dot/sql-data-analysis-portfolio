@@ -2,20 +2,18 @@
 
 ## Overview
 
-This project analyzes sales invoices by sales type using Microsoft SQL Server.
+This project focuses on analyzing sales types in the `SLS.Invoice` table using Microsoft SQL Server.
+
+The analysis identifies the unique sales types, calculates the number of invoices for each sales type, and determines the relative percentage of each sales type compared with the total number of invoices.
 
 ## Objective
 
-The objective is to calculate the number of invoices for each sales type and determine the relative share of each sales type compared with the total number of invoices.
+The main objectives of this project are:
 
-## SQL Concepts
-
-* `COUNT()`
-* `GROUP BY`
-* `ORDER BY`
-* Subquery
-* Aggregate functions
-* Percentage / ratio calculation
+* Identify unique values in the `SalesTypeRef` column.
+* Calculate the number of invoices for each sales type.
+* Calculate the relative percentage of each sales type compared with the total.
+* Sort the results based on their percentage contribution.
 
 ## Database
 
@@ -23,12 +21,24 @@ The objective is to calculate the number of invoices for each sales type and det
 **Schema:** SLS
 **Table:** Invoice
 
-## Key Analysis
+## SQL Concepts
 
-The query groups invoices by `SaleTypeRef` and calculates the contribution of each sales type to the total number of invoices.
+* `SELECT`
+* `COUNT()`
+* `GROUP BY`
+* `ORDER BY`
+* Subqueries
+* Aggregate functions
+* Relative percentage calculation
+
+## Analysis
+
+The project groups invoice records according to `SalesTypeRef`. For each sales type, the total number of invoices is calculated and compared with the overall number of invoices in the table.
+
+This provides a clear view of the distribution and relative contribution of different sales types within the invoice data.
 
 ## SQL File
 
-The SQL query for this project is available in:
+The complete SQL query used for this project is available in:
 
 `project-02.sql`
